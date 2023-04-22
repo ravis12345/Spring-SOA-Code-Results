@@ -1,0 +1,21 @@
+<template>
+    <div style="height: 300px;">
+        <lightning-card title="Wrapper Class LWC Datatable" icon-name="standard:account">
+            <div class="slds-m-around_medium">
+                <template if:true={data}>
+                    <lightning-datatable    
+                        data={data}
+                        columns={columns}
+                        key-field="id"
+                        hide-checkbox-column
+                    >
+                    </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+            
+        </lightning-card>
+    </div>
+</template>
